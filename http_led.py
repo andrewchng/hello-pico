@@ -92,7 +92,7 @@ def serve_forever(ip, port=80):
                         led.value(1)
                     elif path == b"/off":
                         led.value(0)
-                    elif  == b"/toggle":
+                    elif path == b"/toggle":
                         led.value(0 if led.value() else 1)
 
                     cl.sendall(html_page(led.value()))
